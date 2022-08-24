@@ -55,14 +55,14 @@ class MoveItSimpleControllerManager : public moveit_controller_manager::MoveItCo
 public:
   MoveItSimpleControllerManager() : node_handle_("~")
   {
-    if (!node_handle_.hasParam("controller_list"))
+    if (!node_handle_.hasParam("/controller_list"))
     {
       ROS_ERROR_STREAM_NAMED(LOGNAME, "No controller_list specified.");
       return;
     }
 
     XmlRpc::XmlRpcValue controller_list;
-    node_handle_.getParam("controller_list", controller_list);
+    node_handle_.getParam("/controller_list", controller_list);
     if (!isArray(controller_list))
     {
       ROS_ERROR_NAMED(LOGNAME, "Parameter controller_list should be specified as an array");
