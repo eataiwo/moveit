@@ -61,3 +61,7 @@ qtcreator-*
 
 _build
 _autosummary
+
+# Pycharm IDE
+# idea folder, uncomment if you don't need it
+*.idea*
