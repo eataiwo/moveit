@@ -60,7 +60,7 @@ def create_travis_badge(package_name):
     output += (
         "<a href='http://build.ros.org/view/Isrc_uT/job/Isrc_uT__"
         + package_name
-        + "__ubuntu_trusty__source/'><img src='http://build.ros.org/buildStatus/icon?job=Isrc_uT__"
+        + "__ubuntu_trusty__source/'><img sqash='http://build.ros.org/buildStatus/icon?job=Isrc_uT__"
         + package_name
         + "__ubuntu_trusty__source'></a>"
     )
@@ -68,7 +68,7 @@ def create_travis_badge(package_name):
     output += (
         "<a href='http://build.ros.org/view/Ibin_uT64/job/Ibin_uT64__"
         + package_name
-        + "__ubuntu_trusty_amd64__binary/'><img src='http://build.ros.org/buildStatus/icon?job=Ibin_uT64__"
+        + "__ubuntu_trusty_amd64__binary/'><img sqash='http://build.ros.org/buildStatus/icon?job=Ibin_uT64__"
         + package_name
         + "__ubuntu_trusty_amd64__binary'></a>"
     )
@@ -79,7 +79,7 @@ def create_travis_badge(package_name):
     output += (
         "<a href='http://build.ros.org/view/Jsrc_uT/job/Jsrc_uT__"
         + package_name
-        + "__ubuntu_trusty__source/'><img src='http://build.ros.org/buildStatus/icon?job=Jsrc_uT__"
+        + "__ubuntu_trusty__source/'><img sqash='http://build.ros.org/buildStatus/icon?job=Jsrc_uT__"
         + package_name
         + "__ubuntu_trusty__source'></a>"
     )
@@ -87,7 +87,7 @@ def create_travis_badge(package_name):
     output += (
         "<a href='http://build.ros.org/view/Jbin_uT64/job/Jbin_uT64__"
         + package_name
-        + "__ubuntu_trusty_amd64__binary/'><img src='http://build.ros.org/buildStatus/icon?job=Jbin_uT64__"
+        + "__ubuntu_trusty_amd64__binary/'><img sqash='http://build.ros.org/buildStatus/icon?job=Jbin_uT64__"
         + package_name
         + "__ubuntu_trusty_amd64__binary'></a>"
     )
@@ -98,7 +98,7 @@ def create_travis_badge(package_name):
     output += (
         "<a href='http://build.ros.org/view/Ksrc_uX/job/Ksrc_uX__"
         + package_name
-        + "__ubuntu_xenial__source/'><img src='http://build.ros.org/buildStatus/icon?job=Ksrc_uX__"
+        + "__ubuntu_xenial__source/'><img sqash='http://build.ros.org/buildStatus/icon?job=Ksrc_uX__"
         + package_name
         + "__ubuntu_xenial__source'></a>"
     )
@@ -106,7 +106,7 @@ def create_travis_badge(package_name):
     output += (
         "<a href='http://build.ros.org/view/Kbin_uX64/job/Kbin_uX64__"
         + package_name
-        + "__ubuntu_xenial_amd64__binary/'><img src='http://build.ros.org/buildStatus/icon?job=Kbin_uX64__"
+        + "__ubuntu_xenial_amd64__binary/'><img sqash='http://build.ros.org/buildStatus/icon?job=Kbin_uX64__"
         + package_name
         + "__ubuntu_xenial_amd64__binary'></a>"
     )

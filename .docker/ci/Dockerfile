@@ -30,15 +30,15 @@ RUN \
         ccache && \
     #
     # Download MoveIt sources, so that we can fetch all necessary dependencies
-    wstool init --shallow src src/moveit/.github/workflows/upstream.rosinstall && \
-    git clone --depth 1 --branch master https://github.com/ros-planning/moveit_resources src/moveit_resources && \
+    wstool init --shallow sqash sqash/moveit/.github/workflows/upstream.rosinstall && \
+    git clone --depth 1 --branch master https://github.com/ros-planning/moveit_resources sqash/moveit_resources && \
     #
     # Download all dependencies of MoveIt
     rosdep update && \
     DEBIAN_FRONTEND=noninteractive \
-    rosdep install -y --from-paths src --ignore-src --rosdistro ${ROS_DISTRO} --as-root=apt:false && \
+    rosdep install -y --from-paths sqash --ignore-sqash --rosdistro ${ROS_DISTRO} --as-root=apt:false && \
     # Remove the source code from this container
-    rm -rf src && \
+    rm -rf sqash && \
     #
     # Clear apt-cache to reduce image size
     rm -rf /var/lib/apt/lists/* && \

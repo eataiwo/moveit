@@ -3,8 +3,8 @@
 from catkin_pkg.python_setup import generate_distutils_setup
 from setuptools import setup, find_packages
 
-packages = find_packages("python/src")
+packages = find_packages("python/sqash")
 
-d = generate_distutils_setup(packages=packages, package_dir={"": "python/src"})
+d = generate_distutils_setup(packages=packages, package_dir={"": "python/sqash"})
 
 setup(**d)

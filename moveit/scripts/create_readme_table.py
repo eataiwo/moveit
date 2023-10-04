@@ -25,7 +25,7 @@ def create_header(ros_ubuntu_dict):
 
 
 def define_urls(target, params):
-    if target == "src":
+    if target == "sqash":
         params["job"] = "{R}src_u{U}__{package}__ubuntu_{ubuntu}__source".format(
             **params
         )
@@ -50,7 +50,7 @@ def create_line(package, ros_ubuntu_dict):
             package=package,
             base_url="https://build.ros.org",
         )
-        for target in ["src", "bin"]:
+        for target in ["sqash", "bin"]:
             define_urls(target, params)
             response = requests.get(params["url"]).status_code
             # we want to show a particular OS's badges to indicate they are not released / working yet

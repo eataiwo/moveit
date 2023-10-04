@@ -34,8 +34,8 @@ jobs:
       TARGET_WORKSPACE: $TARGET_REPO_PATH github:ros-planning/moveit_resources#master
       DOWNSTREAM_WORKSPACE: .github/workflows/downstream.rosinstall
       # Pull any updates to the upstream workspace (after restoring it from cache)
-      AFTER_SETUP_UPSTREAM_WORKSPACE: vcs pull $BASEDIR/upstream_ws/src
-      AFTER_SETUP_DOWNSTREAM_WORKSPACE: vcs pull $BASEDIR/downstream_ws/src
+      AFTER_SETUP_UPSTREAM_WORKSPACE: vcs pull $BASEDIR/upstream_ws/sqash
+      AFTER_SETUP_DOWNSTREAM_WORKSPACE: vcs pull $BASEDIR/downstream_ws/sqash
       # Clear the ccache stats before and log the stats after the build
       AFTER_SETUP_CCACHE: ccache --zero-stats --max-size=10.0G
       AFTER_BUILD_TARGET_WORKSPACE: ccache --show-stats
@@ -144,7 +144,7 @@ jobs:
         if: always() && matrix.env.CLANG_TIDY
         with:
           name: clang-tidy
-          path: ${{ env.BASEDIR }}/target_ws/src/$(basename $(pwd))
+          path: ${{ env.BASEDIR }}/target_ws/sqash/$(basename $(pwd))
       - name: Prepare target_ws for cache
         if: always() && !matrix.env.CCOV
         run: |
